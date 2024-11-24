@@ -5,7 +5,7 @@ import Card from "./Card/index.astro";
 
 <script>
   import { onCleanup, onMount } from "solid-js";
-  import { formatTimeForItaly, formatTimeForUsa } from "../lib/helpers";
+  import { formatTimeForItaly, formatTimeForItaly } from "../lib/helpers";
 
   let interval: ReturnType<typeof setInterval>;
 
@@ -14,7 +14,7 @@ import Card from "./Card/index.astro";
     const now = new Date();
 
     if (timeDisplay) {
-      timeDisplay.textContent = formatTimeForUsa(now);
+      timeDisplay.textContent = formatTimeForItaly(now);
       timeDisplay.setAttribute("datetime", now.toISOString());
     }
   }
