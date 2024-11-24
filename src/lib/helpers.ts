@@ -2,18 +2,18 @@ export function trimText(input: string, maxLength: number = 100): string {
   if (input.length <= maxLength) return input;
   return input.substring(0, maxLength - 3) + "...";
 }
-export function getCurrentTimeInUsa(): Date {
+export function getCurrentTimeInItaly(): Date {
   // Create a date object with the current UTC time
   const now = new Date();
 
-  // Convert the UTC time to Country's time
-  const offsetUsa = -7; // Phoenix is in Central European Summer Time (UTC-7), but you might need to adjust this based on Daylight Saving Time
-  now.setHours(now.getUTCHours() + offsetUsa);
+  // Convert the UTC time to Italy's time
+  const offsetItaly = -7; // Italy is in Central European Summer Time (UTC-7), but you might need to adjust this based on Daylight Saving Time
+  now.setHours(now.getUTCHours() + offsetItaly);
 
   return now;
 }
 
-export function formatTimeForUsa(date: Date): string {
+export function formatTimeForItaly(date: Date): string {
   const options: Intl.DateTimeFormatOptions = {
     hour: "numeric",
     minute: "2-digit",
